@@ -1,0 +1,16 @@
+.toolbar-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 36px;
+    color: var(--sky-dark);
+    text-transform: uppercase;
+    margin-left: 30px;
+    border-bottom: 3px solid white;
+
+    transition: border-bottom 0.3s ease;
+}
+
+.toolbar-link:hover {
+    cursor: pointer;
+    border-bottom: 3px solid var(--sky-dark);
+}
