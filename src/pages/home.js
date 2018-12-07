@@ -7,6 +7,7 @@ import Calendar from '../components/calendar/calendar.js';
 import TextLink from '../components/textLink/textLink.js';
 import Toolbar from '../components/toolbar/toolbar.js';
 import ToolbarLink from '../components/toolbarLink/toolbarLink.js';
+import Menu from '../components/menu/menu.js';
 
 import './home.css';
 
@@ -16,7 +17,7 @@ class Homepage extends Component {
             <div className="home">
                 <Toolbar>
                     <div className="toolbar-links">
-                        <i className="material-icons" id="menu-button">menu</i>
+                        <Menu />
                     </div>
                 </Toolbar>
                 <div className="section" id="hero-section">

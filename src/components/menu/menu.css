@@ -1,0 +1,38 @@
+.menu {
+  background-color: var(--blue-dark);
+  color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 10;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+
+  transition: border-radius 0.2s ease, width 0.25s ease, height 0.2s ease;
+}
+
+#menu-button {
+  padding: 12px;
+  transition: padding 0.2s ease-out;
+}
+#menu-button:hover {
+  cursor: pointer;
+}
+
+.menu.inactive {
+  border-radius: 24px;
+}
+.menu.inactive:hover {
+  border-radius: 12px;
+}
+.menu.inactive > .menu-content {
+  height: 0;
+  width: 0;
+}
+.menu.active {
+  border-radius: 3px;
+  width: calc(100vw / 2);
+  height: calc(100vh / 2);
+}
