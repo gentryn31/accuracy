@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { string, bool, number, any, func, } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 
@@ -8,15 +9,16 @@ import './textLink.css';
 class TextLink extends Component {
     render() {
         return (
-            <div className="text-link" id={`${this.props.text.toLowerCase().split(' ').join('-')}-text-link`}>
+            <Link to={this.props.link} className="text-link" id={`${this.props.text.toLowerCase().split(' ').join('-')}-text-link`}>
                 {this.props.text}
-            </div>
+            </Link>
         );
     }
 }
 
 TextLink.propTypes = {
-    text: string.isRequired
+    text: string.isRequired,
+    link: string.isRequired,
 }
 
 export default TextLink;

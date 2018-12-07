@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import { string, bool, number, any, func, } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import './toolbarLink.css';
 
 class ToolbarLink extends Component {
     render() {
         return (
-            <div className="toolbar-link">
+            <Link to={this.props.link} className="toolbar-link">
                 {this.props.text}
-            </div>
+            </Link>
         );
     }
 }
 
 ToolbarLink.propTypes = {
-    text: string.isRequired
+    text: string.isRequired,
+    link: string.isRequired,
 }
 
 export default ToolbarLink;

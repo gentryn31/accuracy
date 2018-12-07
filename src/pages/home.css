@@ -11,12 +11,33 @@
     margin-left: 25px;
 }
 
+#menu-button {
+    padding: 12px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: var(--blue-dark);
+    color: white;
+    border-radius: 50%;
+
+    transition: padding 0.2s ease-out, top 0.2s ease-out, right 0.2s ease-out;
+}
+#menu-button:hover {
+    cursor: pointer;
+    background-color: var(--blue-dark);
+    top: 16px;
+    right: 16px;
+    padding: 16px;
+}
+
 #hero-section {
     display: flex;
     flex-direction: row;
     position: relative;
-    padding-top: 180px;
     background-color: white;
+    padding-top: 80px;
 }
 
 #hero-text {
@@ -30,6 +51,7 @@
 #hero-image {
     position: absolute;
     right: 60px;
+    top: 50px;
     width: calc((100vw - 180px) / 2);
     z-index: 2;
 }
@@ -68,11 +90,19 @@
     display: inline-block;
 }
 
+a {
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+}
+
 .services-heading {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 24px 0 12px 0;
+    text-decoration: none;
 }
 .services-heading:hover {
     cursor: pointer;
@@ -81,6 +111,12 @@
 .heading-arrow {
     display: inline-block;
     fill: var(--sky-dark);
+}
+a:hover > div > .heading-arrow {
+    animation: poke 1s ease infinite;
+}
+a:focus > div > .heading-arrow {
+    animation: poke 1s ease infinite;
 }
 
 #about-team-section {
@@ -169,11 +205,13 @@ input {
     outline: 0;
     border: 0;
     border-bottom: 2px solid var(--blue-dark);
+    padding: 0 12px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
 textarea {
     width: 100%;
-    line-height: 35px;
+    line-height: 25px;
     font-size: 17px;
     background-color: rgba(232,247,255,.5);
     outline: 0;
@@ -181,6 +219,8 @@ textarea {
     border-bottom: 2px solid var(--blue-dark);
     resize: vertical;
     margin-bottom: 24px;
+    padding: 12px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
 }
 
 footer {
@@ -203,15 +243,14 @@ footer {
     grid-column-gap: 60px;
     line-height: 35px;
 }
+#footer-links > div {
+    display: flex;
+    flex-direction: column;
+}
 
 #footer-copyright {
     font-size: 14px;
     margin-top: 60px;
-}
-
-#site-map-text-link {
-    margin-top: 60px;
-    text-align: right;
 }
 
 @keyframes timer {
@@ -220,5 +259,14 @@ footer {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes poke {
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }

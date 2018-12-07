@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { string, bool, number, any, func, } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Button from '../components/button/button.js';
 import Calendar from '../components/calendar/calendar.js';
@@ -15,10 +16,7 @@ class Homepage extends Component {
             <div className="home">
                 <Toolbar>
                     <div className="toolbar-links">
-                        <ToolbarLink text="Contact" />
-                        <ToolbarLink text="About" />
-                        <ToolbarLink text="Pricing" />
-                        <ToolbarLink text="Schedule" />
+                        <i className="material-icons" id="menu-button">menu</i>
                     </div>
                 </Toolbar>
                 <div className="section" id="hero-section">
@@ -26,7 +24,6 @@ class Homepage extends Component {
                         <h2 id="hero-title">Time is Money.<br />We Save You Both.</h2>
                         <p id="hero-subtitle">Our team takes on your accounting needs, allowing you to focus on your vision while we put you in the best financial position.</p>
                         <Button text="Schedule a Meeting" />
-                        <Button text="Pricing" raised={false} />
                     </div>
                     <div id="hero-image">
                         <svg viewBox="0 0 408 434" width="408" height="434">
@@ -52,77 +49,87 @@ class Homepage extends Component {
                     <div id="services-text">
                         <div className="services-column">
                             <h3 id="services-title">The Complete Package</h3>
-                            <div class="services-heading">
-                                <h4 className="service" id="bookkeeping">Bookkeeping</h4>
-                                <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
-                                    <defs>
-                                        <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
-                                            <rect width="6.9" height="9.6"/>
-                                        </clipPath>
-                                    </defs>
-                                    <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
-                                        <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
-                                    </g>
-                                </svg>
-                            </div>
+                            <Link to="/services/bookkeeping">
+                                <div class="services-heading">
+                                    <h4 className="service" id="bookkeeping">Bookkeeping</h4>
+                                    <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
+                                        <defs>
+                                            <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
+                                                <rect width="6.9" height="9.6"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
+                                            <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </Link>
                             <p className="service-paragraph" id="bookkeeping-content">We'll keep track of your bottom line. Profits and losses, assets and liabilities - we've got it all covered with our namesake accuracy.</p>
-                            <div class="services-heading">
-                                <h4 className="service" id="taxes">Taxes</h4>
-                                <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
-                                    <defs>
-                                        <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
-                                            <rect width="6.9" height="9.6"/>
-                                        </clipPath>
-                                    </defs>
-                                    <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
-                                        <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
-                                    </g>
-                                </svg>
-                            </div>
+                            <Link to="/services/taxes">
+                                <div class="services-heading">
+                                    <h4 className="service" id="taxes">Taxes</h4>
+                                    <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
+                                        <defs>
+                                            <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
+                                                <rect width="6.9" height="9.6"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
+                                            <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </Link>
                             <p className="service-paragraph" id="taxes-content">Taxes are a pain and eat up time. We keep updated on tax codes and use that expertise to ease the burden from your shoulders.</p>
                         </div>
                         <div className="services-column">
-                            <div class="services-heading">
-                                <h4 className="service" id="audits">Audits</h4>
-                                <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
-                                    <defs>
-                                        <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
-                                            <rect width="6.9" height="9.6"/>
-                                        </clipPath>
-                                    </defs>
-                                    <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
-                                        <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
-                                    </g>
-                                </svg>
-                            </div>
+                            <Link to="/services/audits">
+                                <div class="services-heading">
+                                    <h4 className="service" id="audits">Audits</h4>
+                                    <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
+                                        <defs>
+                                            <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
+                                                <rect width="6.9" height="9.6"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
+                                            <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </Link>
                             <p className="service-paragraph" id="audits-content">At Accuracy, we provide an unbiased team of trained professionals that produce reputable reports from thorough audits.</p>
-                            <div class="services-heading">
-                                <h4 className="service" id="annual-reports">Annual Reports</h4>
-                                <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
-                                    <defs>
-                                        <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
-                                            <rect width="6.9" height="9.6"/>
-                                        </clipPath>
-                                    </defs>
-                                    <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
-                                        <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
-                                    </g>
-                                </svg>
-                            </div>
+                            <Link to="/services/annual-reports">
+                                <div class="services-heading">
+                                    <h4 className="service" id="annual-reports">Annual Reports</h4>
+                                    <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
+                                        <defs>
+                                            <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
+                                                <rect width="6.9" height="9.6"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
+                                            <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </Link>
                             <p className="service-paragraph" id="annual-reports-content">Our team has trained on writing annual reports for small businesses, so you can spend your time on growing your company.</p>
-                            <div class="services-heading">
-                                <h4 className="service" id="consulting">Consulting</h4>
-                                <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
-                                    <defs>
-                                        <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
-                                            <rect width="6.9" height="9.6"/>
-                                        </clipPath>
-                                    </defs>
-                                    <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
-                                        <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
-                                    </g>
-                                </svg>
-                            </div>
+                            <Link to="/services/consulting">
+                                <div class="services-heading">
+                                    <h4 className="service" id="consulting">Consulting</h4>
+                                    <svg className="heading-arrow" viewBox="0 0 6.9 9.6" width="6.9" height="9.6">
+                                        <defs>
+                                            <clipPath id="_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE">
+                                                <rect width="6.9" height="9.6"/>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#_clipPath_znpim9M0zQRUITkgP8s2XpBZRutOGzeE)">
+                                            <path d=" M 0 0.278 L 0 9.309 C 0 9.586 0.184 9.682 0.411 9.523 L 6.755 5.081 C 6.982 4.922 6.982 4.665 6.755 4.506 L 0.411 0.064 C 0.184 -0.095 0 0.001 0 0.278 Z "/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </Link>
                             <p className="service-paragraph" id="consulting-content">You have the vision. We have the experience to guide you through the ups and downs and lead your company to its goals.</p>
                         </div>
                     </div>
@@ -157,7 +164,7 @@ class Homepage extends Component {
                     </div>
                 </div>
                 <div className="section" id="schedule-section">
-                    <h3 id="schedule-title">Interested? Schedule a Meeting</h3>
+                    <h3 id="schedule-title">Interested? Get in Touch.</h3>
                     <form id="schedule-form">
                         <div className="input-name">Name</div>
                         <input id="schedule-name" type="text" />
@@ -189,18 +196,22 @@ class Homepage extends Component {
                     </div>
                     <div id="footer-links">
                         <div>
-                            <TextLink text="About Us"/>
-                            <TextLink text="Our Services"/>
-                            <TextLink text="Pricing"/>
-                            <TextLink text="FAQs"/>
+                            <b>SERVICES</b>
+                            <TextLink text="Bookkeeping" link="bookkeeping"/>
+                            <TextLink text="Audits" link="audits"/>
+                            <TextLink text="Taxes" link="taxes"/>
+                            <TextLink text="Annual Reports" link="annual-reports"/>
+                            <TextLink text="Consulting" link="consulting"/>
                         </div>
                         <div>
-                            <TextLink text="Contact Us"/>
-                            <TextLink text="Schedule a Meeting"/>
+                            <b>HELP</b>
+                            <TextLink text="About Us" link="about"/>
+                            <TextLink text="Contact Us" link="contact"/>
+                            <TextLink text="FAQs" link="faqs"/>
+                            <TextLink text="Site Map" link="site-map"/>
                         </div>
                     </div>
                     <div id="footer-copyright">&copy; Accuracy 2018</div>
-                    <TextLink text="Site Map"/>
                 </footer>
             </div>
         );
