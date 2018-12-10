@@ -5,20 +5,30 @@
 .App {
   font-family: 'Montserrat', Helvetica, sans-serif;
 
-  --blue-dark: #004E8E;
-  --blue-med:#99B8D2;
-  --blue-light:#E5EDF4;
+  --blue-dark: #004e8e;
+  --blue-med: #99b8d2;
+  --blue-light: #e5edf4;
 
-  --sky-dark:#1CB3FF;
-  --sky-med:#A4E0FF;
-  --sky-light:#E8F7FF;
+  --sky-dark: #1cb3ff;
+  --sky-med: #a4e0ff;
+  --sky-light: #e8f7ff;
 
-  --green-dark:#4ADB84;
+  --green-dark: #4adb84;
 
-  --red-dark:#FF6060;
+  --red-dark: #ff6060;
 
   --gray-dark: #292929;
-  --gray-light: #FAFAFA;
+  --gray-light: #fafafa;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -35,6 +45,30 @@ h3 {
   margin: 0;
 }
 
+@media screen and (max-width: 599px) {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  h2 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1499px) {
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+}
 h4 {
   font-weight: 700;
   color: var(--sky-dark);

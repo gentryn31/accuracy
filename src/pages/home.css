@@ -1,5 +1,4 @@
 .section {
-  padding: 120px 60px;
   position: relative;
 }
 
@@ -13,26 +12,78 @@
 
 #hero-section {
   display: flex;
-  flex-direction: row;
   position: relative;
   background-color: white;
-  padding-top: 80px;
-}
-
-#hero-text {
-  width: calc((100vw - 180px) / 2);
-}
-
-#hero-subtitle {
-  margin: 30px 0;
 }
 
 #hero-image {
-  position: absolute;
-  right: 60px;
-  top: 50px;
-  width: calc((100vw - 180px) / 2);
   z-index: 2;
+}
+@media screen and (max-width: 599px) {
+  .section {
+    padding: 50px 24px;
+  }
+  #hero-section {
+    padding-top: 25px;
+    flex-direction: column;
+  }
+  #hero-text {
+    width: 100%;
+  }
+  #hero-subtitle {
+    margin: 30px 0;
+  }
+  #hero-image {
+    position: relative;
+    height: 75vw;
+    justify-content: center;
+  }
+  #hero-image > svg {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .section {
+    padding: 120px 10%;
+  }
+  #hero-section {
+    padding-top: 80px;
+    flex-direction: row;
+  }
+  #hero-text {
+    width: calc((100vw - 20%) / 2);
+  }
+  #hero-subtitle {
+    margin: 30px 0;
+  }
+  #hero-image {
+    position: absolute;
+    right: 60px;
+    top: 50px;
+    width: calc((100vw - 180px) / 2);
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1499px) {
+  .section {
+    padding: 180px 9%;
+  }
+  #hero-section {
+    padding-top: 120px;
+    flex-direction: row;
+  }
+  #hero-text {
+    width: calc((100vw - 27%) / 2);
+  }
+  #hero-subtitle {
+    margin: 35px 0;
+  }
+  #hero-image {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: calc((100vw - 180px) / 2);
+  }
 }
 
 #hero-arrow-one {
@@ -185,12 +236,18 @@ input {
   border: 0;
   border-bottom: 2px solid var(--blue-dark);
   padding: 0 12px;
-  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
+
+  transition: border-bottom 0.2s ease;
+}
+input:focus {
+  border-bottom: 2px solid var(--sky-dark);
 }
 
 textarea {
   width: 100%;
   line-height: 25px;
+  min-height: 75px;
   font-size: 17px;
   background-color: rgba(232, 247, 255, 0.5);
   outline: 0;
@@ -199,7 +256,12 @@ textarea {
   resize: vertical;
   margin-bottom: 24px;
   padding: 12px;
-  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
+
+  transition: border-bottom 0.2s ease;
+}
+textarea:focus {
+  border-bottom: 2px solid var(--sky-dark);
 }
 
 footer {

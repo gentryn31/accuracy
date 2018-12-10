@@ -1,31 +1,45 @@
 .button {
-    display: inline-block;
-    padding: 9.7px 15.1px;
-    border-radius: 3px;
+  display: inline-block;
+  padding: 9.7px 15.1px;
+  border-radius: 3px;
 
-    color: var(--green-dark);
+  color: var(--green-dark);
 
-    font-weight: 700;
-    font-size: 14;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14;
+  text-transform: uppercase;
+
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
+  color: #6ee29d;
 }
 
 .raised {
-    background-color: var(--green-dark);
-    color: white;
+  background-color: var(--green-dark);
+  color: white;
 
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.05);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
+}
+.raised:hover {
+  background-color: #6ee29d;
+  color: white;
 }
 
 .button-arrow {
-    margin-left: 12.5px;
-    fill: var(--green-dark);
+  margin-left: 12.5px;
+  fill: var(--green-dark);
 }
 
 .raised > .button-arrow {
-    fill: white;
+  fill: white;
+}
+
+@media screen and (max-width: 599px) {
+  .button {
+    width: 100%;
+    text-align: center;
+  }
 }
