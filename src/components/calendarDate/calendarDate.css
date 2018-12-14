@@ -1,0 +1,18 @@
+.calendar-date {
+  text-align: center;
+}
+.calendar-date.day {
+  color: var(--sky-med);
+}
+.calendar-date.inactive {
+  color: #b9b9b9;
+}
+.calendar-date.active {
+  color: #292929;
+}
+.calendar-date.active:hover {
+  cursor: pointer;
+}
+.calendar-date.selected {
+  color: var(--sky-dark);
+}

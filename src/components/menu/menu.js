@@ -99,6 +99,7 @@ class Menu extends React.Component {
             <TextLink text="Site Map" link="site-map" />
           </div>
         </div>
+        <div id="menu-copyright">&copy; Accuracy 2018</div>
       </div>
     );
   }

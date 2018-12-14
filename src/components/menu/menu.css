@@ -83,3 +83,36 @@ a.info-details {
 a.info-details:hover {
   color: white;
 }
+
+@media screen and (max-width: 499px) {
+  .menu {
+    overflow-y: scroll;
+  }
+  #menu-button {
+    top: 6px;
+    right: 6px;
+  }
+  #menu-logo {
+    margin: 24px;
+  }
+  .menu-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 24px;
+  }
+  .menu-content-column {
+    margin-bottom: 30px;
+  }
+  .menu-subtitle {
+    margin-bottom: 15px;
+  }
+}
+
+#menu-copyright {
+  font-size: 14px;
+  margin-top: 60px;
+  color: var(--blue-med);
+  position: absolute;
+  bottom: 48px;
+  left: 9vw;
+}
