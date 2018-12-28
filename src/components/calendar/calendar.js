@@ -54,42 +54,42 @@ class Calendar extends Component {
     this.setState({ displayMonth: newMonth, displayYear: newYear });
   }
 
-  fillCalendar(displayMonth, displayYear) {
+  fillCalendar(displayMonth, displayYear, selected) {
     let calendarViews = [
       [
         <div className="week">
           <CalendarDate
-            date="S"
+            text="S"
             status="day"
             onClick={e => this.props.onClick(e)}
           />
           <CalendarDate
-            date="M"
+            text="M"
             status="day"
             onClick={e => this.props.onClick(e)}
           />
           <CalendarDate
-            date="T"
+            text="T"
             status="day"
             onClick={e => this.props.onClick(e)}
           />
           <CalendarDate
-            date="W"
+            text="W"
             status="day"
             onClick={e => this.props.onClick(e)}
           />
           <CalendarDate
-            date="T"
+            text="T"
             status="day"
             onClick={e => this.props.onClick(e)}
           />
           <CalendarDate
-            date="F"
+            text="F"
             status="day"
             onClick={e => this.props.onClick(e)}
           />
           <CalendarDate
-            date="S"
+            text="S"
             status="day"
             onClick={e => this.props.onClick(e)}
           />
@@ -111,10 +111,13 @@ class Calendar extends Component {
           status = 'inactive';
         } else if (fillDate < this.state.currentDate) {
           status = 'inactive';
+        } else if (fillDate == new Date(this.props.selected)) {
+          status = 'selected';
         }
         week.push(
           <CalendarDate
-            date={date}
+            text={date}
+            date={fillDate.toString()}
             status={status}
             onClick={e => this.props.onClick(e)}
           />
@@ -136,12 +139,22 @@ class Calendar extends Component {
             status = 'inactive';
           } else if (fillDate < this.state.currentDate) {
             status = 'inactive';
+          } else if (fillDate == new Date(this.props.selected)) {
+            status = 'selected';
           }
           week.push(
             <CalendarDate
-              date={date}
+              text={date}
+              date={fillDate.toString()}
               status={status}
-              onClick={e => this.props.onClick(e)}
+              onClick={e =>
+                this.props.onClick(
+                  e,
+                  this.state.displayMonth,
+                  this.state.displayYear
+                )
+              }
+              selected={this.props.selected}
             />
           );
           date++;
@@ -151,7 +164,7 @@ class Calendar extends Component {
       }
       calendarViews.push(<div className="week">{week}</div>);
     }
-    this.setState({ calendarViews: calendarViews });
+    // this.setState({ calendarViews: calendarViews });
   }
 
   render() {
@@ -212,7 +225,13 @@ class Calendar extends Component {
             </g>
           </svg>
         </div>
-        <div className="calendar-body">{this.state.calendarViews}</div>
+        <div className="calendar-body">
+          {this.fillCalendar(
+            this.state.displayMonth,
+            this.state.displayYear,
+            this.props.selected
+          )}
+        </div>
       </div>
     );
   }

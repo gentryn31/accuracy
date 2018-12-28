@@ -15,4 +15,5 @@
 }
 .calendar-date.selected {
   color: var(--sky-dark);
+  font-weight: 700;
 }

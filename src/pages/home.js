@@ -16,22 +16,19 @@ class Homepage extends Component {
     super();
 
     this.state = {
-      dateInput: ''
+      dateInput: null
     };
   }
 
   dateSelected(e) {
+    const date = e.target.innerText;
+
     this.setState({ dateInput: e.target.innerText });
   }
 
   render() {
     return (
       <div className="home page">
-        <Toolbar>
-          <div className="toolbar-links">
-            <Menu />
-          </div>
-        </Toolbar>
         <div className="section" id="hero-section">
           <div id="hero-text">
             <h2 id="hero-title">
@@ -292,7 +289,7 @@ class Homepage extends Component {
           </div>
         </div>
         <div className="section" id="schedule-section">
-          <h3 id="schedule-title">Interested? Get in Touch.</h3>
+          <h3 id="schedule-title">Interested? Let's Meet.</h3>
           <form id="schedule-form">
             <div className="input-name">Name</div>
             <input id="schedule-name" type="text" />
@@ -304,7 +301,11 @@ class Homepage extends Component {
             <textarea id="schedule-message" />
           </form>
           <Calendar
-            onClick={e => this.dateSelected(e)}
+            onClick={(e, month, year) =>
+              this.setState({
+                dateInput: new Date(year, month, e.target.innerText).toString()
+              })
+            }
             selected={this.state.dateInput}
           />
           <div className="schedule-action-container">
