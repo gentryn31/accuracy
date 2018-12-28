@@ -23,7 +23,25 @@ class Calendar extends Component {
   }
 
   componentDidMount() {
-    this.fillCalendar(this.state.month, this.state.year);
+    this.fillCalendar();
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.selected != this.props.selected) {
+      if (newProps.selected == '') {
+        this.setState({
+          displayMonth: this.state.month,
+          displayYear: this.state.year
+        });
+        this.fillCalendar(this.state.month, this.state.year, newProps.selected);
+      } else {
+        this.fillCalendar(
+          this.state.displayMonth,
+          this.state.displayYear,
+          newProps.selected
+        );
+      }
+    }
   }
 
   lastMonth() {
@@ -35,9 +53,9 @@ class Calendar extends Component {
       newYear = newYear - 1;
     }
 
-    this.fillCalendar(newMonth, newYear);
-
-    this.setState({ displayMonth: newMonth, displayYear: newYear });
+    this.setState({ displayMonth: newMonth, displayYear: newYear }, () => {
+      this.fillCalendar();
+    });
   }
 
   nextMonth() {
@@ -49,12 +67,16 @@ class Calendar extends Component {
       newYear = newYear + 1;
     }
 
-    this.fillCalendar(newMonth, newYear);
-
-    this.setState({ displayMonth: newMonth, displayYear: newYear });
+    this.setState({ displayMonth: newMonth, displayYear: newYear }, () => {
+      this.fillCalendar();
+    });
   }
 
-  fillCalendar(displayMonth, displayYear, selected) {
+  fillCalendar(
+    displayMonth = this.state.displayMonth,
+    displayYear = this.state.displayYear,
+    selected = this.props.selected
+  ) {
     let calendarViews = [
       [
         <div className="week">
@@ -111,7 +133,7 @@ class Calendar extends Component {
           status = 'inactive';
         } else if (fillDate < this.state.currentDate) {
           status = 'inactive';
-        } else if (fillDate == new Date(this.props.selected)) {
+        } else if (selected == fillDate.toString()) {
           status = 'selected';
         }
         week.push(
@@ -119,7 +141,22 @@ class Calendar extends Component {
             text={date}
             date={fillDate.toString()}
             status={status}
-            onClick={e => this.props.onClick(e)}
+            onClick={e => {
+              this.fillCalendar(
+                displayMonth,
+                displayYear,
+                new Date(
+                  displayYear,
+                  displayMonth,
+                  e.target.innerText
+                ).toString()
+              );
+              this.props.onClick(
+                e,
+                this.state.displayMonth,
+                this.state.displayYear
+              );
+            }}
           />
         );
         date++;
@@ -139,7 +176,7 @@ class Calendar extends Component {
             status = 'inactive';
           } else if (fillDate < this.state.currentDate) {
             status = 'inactive';
-          } else if (fillDate == new Date(this.props.selected)) {
+          } else if (selected == fillDate.toString()) {
             status = 'selected';
           }
           week.push(
@@ -147,13 +184,22 @@ class Calendar extends Component {
               text={date}
               date={fillDate.toString()}
               status={status}
-              onClick={e =>
+              onClick={e => {
+                this.fillCalendar(
+                  displayMonth,
+                  displayYear,
+                  new Date(
+                    displayYear,
+                    displayMonth,
+                    e.target.innerText
+                  ).toString()
+                );
                 this.props.onClick(
                   e,
                   this.state.displayMonth,
                   this.state.displayYear
-                )
-              }
+                );
+              }}
               selected={this.props.selected}
             />
           );
@@ -164,7 +210,7 @@ class Calendar extends Component {
       }
       calendarViews.push(<div className="week">{week}</div>);
     }
-    // this.setState({ calendarViews: calendarViews });
+    this.setState({ calendarViews: calendarViews });
   }
 
   render() {
@@ -225,13 +271,7 @@ class Calendar extends Component {
             </g>
           </svg>
         </div>
-        <div className="calendar-body">
-          {this.fillCalendar(
-            this.state.displayMonth,
-            this.state.displayYear,
-            this.props.selected
-          )}
-        </div>
+        <div className="calendar-body">{this.state.calendarViews}</div>
       </div>
     );
   }

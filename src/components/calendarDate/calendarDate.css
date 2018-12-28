@@ -5,7 +5,7 @@
   color: var(--sky-med);
 }
 .calendar-date.inactive {
-  color: #b9b9b9;
+  color: #cacaca;
 }
 .calendar-date.active {
   color: #292929;

@@ -16,15 +16,40 @@ class Homepage extends Component {
     super();
 
     this.state = {
-      dateInput: null
+      contactForm: {
+        name: '',
+        company: '',
+        email: '',
+        date: '',
+        message: ''
+      }
     };
   }
 
-  dateSelected(e) {
+  dateSelected = e => {
     const date = e.target.innerText;
 
     this.setState({ dateInput: e.target.innerText });
-  }
+  };
+
+  clearForm = () => {
+    const contactForm = this.state.contactForm;
+
+    Object.keys(contactForm)
+      .filter(input => {
+        return input != 'date';
+      })
+      .map(input => {
+        document.getElementById(`schedule-${input}`).value = '';
+        return input;
+      });
+
+    this.setState({
+      contactForm: { name: '', company: '', email: '', date: '', message: '' }
+    });
+  };
+
+  submitForm = () => {};
 
   render() {
     return (
@@ -235,14 +260,17 @@ class Homepage extends Component {
             <h3 id="about-team-title">Say Hello to Your Personal Team</h3>
             <p id="about-team-paragraph">
               From the first meeting, we pair you with a group of experts backed
-              by Accuracy’s high standard. They stay by your side throughout you
-              and your company’s journey and become invested in the work you are
+              by Accuracy’s high standard. They stay by your side throughout
+              your company’s journey and become invested in the work you are
               doing. Because of this loyalty and consistency, you gain a team
               that wants to see you succeed and are always up to date with your
               startup’s financial goals and status. They come with all the
               benefits of hiring your own team, without the in-house cost.{' '}
             </p>
-            <Button text="Meet the Team" />
+            <Button
+              text="Meet the Team"
+              onClick={() => this.props.history.push('/about#team')}
+            />
           </div>
           <div id="about-team-image">
             <img src={require('../assets/team.png')} alt="The accuracy team" />
@@ -292,26 +320,97 @@ class Homepage extends Component {
           <h3 id="schedule-title">Interested? Let's Meet.</h3>
           <form id="schedule-form">
             <div className="input-name">Name</div>
-            <input id="schedule-name" type="text" />
+            <input
+              id="schedule-name"
+              type="text"
+              onBlur={() => {
+                const contactForm = this.state.contactForm;
+                const nameValue = document.getElementById('schedule-name')
+                  .value;
+                contactForm.name = nameValue;
+                this.setState({ contactForm: contactForm });
+              }}
+            />
             <div className="input-name">Company</div>
-            <input id="schedule-company" type="text" />
+            <input
+              id="schedule-company"
+              type="text"
+              onBlur={() => {
+                const contactForm = this.state.contactForm;
+                const companyValue = document.getElementById('schedule-company')
+                  .value;
+                contactForm.company = companyValue;
+                this.setState({ contactForm: contactForm });
+              }}
+            />
             <div className="input-name">Email</div>
-            <input id="schedule-email" type="email" />
-            <div className="input-name">Message</div>
-            <textarea id="schedule-message" />
+            <input
+              id="schedule-email"
+              type="email"
+              onBlur={() => {
+                const contactForm = this.state.contactForm;
+                const emailValue = document.getElementById('schedule-email')
+                  .value;
+                contactForm.email = emailValue;
+                this.setState({ contactForm: contactForm });
+              }}
+            />
+            <div className="input-name">
+              Message <i>(optional)</i>
+            </div>
+            <textarea
+              id="schedule-message"
+              onBlur={() => {
+                const contactForm = this.state.contactForm;
+                const messageValue = document.getElementById('schedule-message')
+                  .value;
+                contactForm.message = messageValue;
+                this.setState({ contactForm: contactForm });
+              }}
+            />
           </form>
           <Calendar
-            onClick={(e, month, year) =>
-              this.setState({
-                dateInput: new Date(year, month, e.target.innerText).toString()
-              })
-            }
-            selected={this.state.dateInput}
+            onClick={(e, month, year) => {
+              const contactForm = this.state.contactForm;
+              const dateValue = new Date(
+                year,
+                month,
+                e.target.innerText
+              ).toString();
+              contactForm.date = dateValue;
+              this.setState({ contactForm: contactForm });
+            }}
+            selected={this.state.contactForm.date}
           />
           <div className="schedule-action-container">
             <div>
-              <Button text="Schedule" />
-              <Button text="Reset" raised={false} arrow={false} />
+              <Button
+                text="Schedule"
+                active={
+                  this.state.contactForm.company != '' &&
+                  this.state.contactForm.date != '' &&
+                  this.state.contactForm.email != '' &&
+                  this.state.contactForm.name != ''
+                }
+                onClick={() => {
+                  this.submitForm();
+                }}
+              />
+              <Button
+                text="Reset"
+                raised={false}
+                arrow={false}
+                active={
+                  this.state.contactForm.company != '' ||
+                  this.state.contactForm.date != '' ||
+                  this.state.contactForm.email != '' ||
+                  this.state.contactForm.name != '' ||
+                  this.state.contactForm.message != ''
+                }
+                onClick={() => {
+                  this.clearForm();
+                }}
+              />
             </div>
           </div>
         </div>

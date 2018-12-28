@@ -80,3 +80,7 @@ p {
   line-height: 22px;
   margin: 0;
 }
+
+.page {
+  min-height: 100%;
+}

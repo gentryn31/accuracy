@@ -11,10 +11,23 @@
 
   transition: color 0.2s ease, background-color 0.2s ease;
 }
-
-.button:hover {
+.button:hover,
+.button:focus {
   cursor: pointer;
   color: #6ee29d;
+  outline: none;
+}
+
+.button:focus {
+  animation: text-flash 1s linear infinite;
+}
+
+.button.inactive,
+.button.inactive:hover,
+.button.inactive:focus {
+  color: #dadada;
+  cursor: auto;
+  animation: none;
 }
 
 .raised {
@@ -23,9 +36,24 @@
 
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.05);
 }
-.raised:hover {
+.raised:hover,
+.raised:focus {
   background-color: #6ee29d;
   color: white;
+}
+
+.raised:focus {
+  animation: background-flash 1s linear infinite;
+}
+
+.raised.inactive,
+.raised.inactive:hover,
+.raised.inactive:focus {
+  background-color: #dadada;
+  color: white;
+  box-shadow: none;
+  cursor: auto;
+  animation: none;
 }
 
 .button-arrow {
@@ -41,5 +69,29 @@
   .button {
     width: 100%;
     text-align: center;
+  }
+}
+
+@keyframes text-flash {
+  0% {
+    color: var(--green-dark);
+  }
+  50% {
+    color: #6ee29d;
+  }
+  100% {
+    color: var(--green-dark);
+  }
+}
+
+@keyframes background-flash {
+  0% {
+    background-color: var(--green-dark);
+  }
+  50% {
+    background-color: #6ee29d;
+  }
+  100% {
+    background-color: var(--green-dark);
   }
 }

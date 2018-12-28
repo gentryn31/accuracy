@@ -208,7 +208,7 @@ a:focus > div > .heading-arrow {
     width: calc((100vw - 180px) / 2);
   }
 }
-@media screen and (min-width: 1000px) and (max-width: 1499px) {
+@media screen and (min-width: 1000px) {
   .section {
     padding: 180px 9%;
   }
@@ -264,6 +264,10 @@ a:focus > div > .heading-arrow {
   font-size: 17px;
   margin-top: 12px;
 }
+.input-name > i {
+  color: #cacaca;
+  font-size: 14px;
+}
 
 input {
   width: 100%;
@@ -300,37 +304,6 @@ textarea {
 }
 textarea:focus {
   border-bottom: 2px solid var(--sky-dark);
-}
-
-footer {
-  background-color: var(--blue-dark);
-  padding: 60px;
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 60px;
-}
-
-#footer-logo {
-  display: inline-block;
-}
-
-#footer-links {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 60px;
-  line-height: 35px;
-}
-#footer-links > div {
-  display: flex;
-  flex-direction: column;
-}
-
-#footer-copyright {
-  font-size: 14px;
-  margin-top: 60px;
-  color: var(--blue-med);
 }
 
 @keyframes timer {

@@ -75,12 +75,18 @@ class Menu extends React.Component {
               onClick={() => {
                 this.setState({ status: 'inactive' });
               }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
             />
             <TextLink
               text="Audits"
               link="/services/audits"
               onClick={() => {
                 this.setState({ status: 'inactive' });
+              }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
               }}
             />
             <TextLink
@@ -89,6 +95,9 @@ class Menu extends React.Component {
               onClick={() => {
                 this.setState({ status: 'inactive' });
               }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
             />
             <TextLink
               text="Annual Reports"
@@ -96,12 +105,18 @@ class Menu extends React.Component {
               onClick={() => {
                 this.setState({ status: 'inactive' });
               }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
             />
             <TextLink
               text="Consulting"
               link="/services/consulting"
               onClick={() => {
                 this.setState({ status: 'inactive' });
+              }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
               }}
             />
           </div>
@@ -113,6 +128,9 @@ class Menu extends React.Component {
               onClick={() => {
                 this.setState({ status: 'inactive' });
               }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
             />
             <TextLink
               text="FAQs"
@@ -120,20 +138,43 @@ class Menu extends React.Component {
               onClick={() => {
                 this.setState({ status: 'inactive' });
               }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
             />
           </div>
           <div className={`menu-content-column`}>
             <b className={`menu-subtitle`}>CONNECT</b>
-            <a href="https://www.twitter.com" className="info-details">
+            <a
+              href="https://www.twitter.com"
+              className="info-details"
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}>
               Twitter
             </a>
-            <a href="https://www.instagram.com" className="info-details">
+            <a
+              href="https://www.instagram.com"
+              className="info-details"
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}>
               Instagram
             </a>
-            <a href="https://www.facebook.com" className="info-details">
+            <a
+              href="https://www.facebook.com"
+              className="info-details"
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}>
               Facebook
             </a>
-            <a href="https://www.youtube.com" className="info-details">
+            <a
+              href="https://www.youtube.com"
+              className="info-details"
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}>
               YouTube
             </a>
           </div>
@@ -145,8 +186,16 @@ class Menu extends React.Component {
               onClick={() => {
                 this.setState({ status: 'inactive' });
               }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
             />
-            <a href="mailto:help@accuracy.com" className={`info-details`}>
+            <a
+              href="mailto:help@accuracy.com"
+              className={`info-details`}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}>
               help@accuracy.com
             </a>
             <p className={`info-details`}>(816) 435-6821</p>
@@ -157,10 +206,15 @@ class Menu extends React.Component {
               onClick={() => {
                 this.setState({ status: 'inactive' });
               }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
+              onBlur={() => {
+                this.setState({ status: 'inactive' });
+              }}
             />
           </div>
         </div>
-        <div id="menu-copyright">&copy; Accuracy 2018</div>
       </div>
     );
   }

@@ -14,7 +14,9 @@ class TextLink extends Component {
           .toLowerCase()
           .split(' ')
           .join('-')}-text-link`}
-        onClick={() => this.props.onClick()}>
+        onClick={() => this.props.onClick()}
+        onFocus={() => this.props.onFocus()}
+        onBlur={() => this.props.onBlur()}>
         {this.props.text}
       </Link>
     );
@@ -24,11 +26,15 @@ class TextLink extends Component {
 TextLink.propTypes = {
   text: string.isRequired,
   link: string.isRequired,
-  onClick: func
+  onClick: func,
+  onFocus: func,
+  onBlur: func
 };
 
 TextLink.defaultProps = {
-  onClick: () => {}
+  onClick: () => {},
+  onFocus: () => {},
+  onBlur: () => {}
 };
 
 export default TextLink;

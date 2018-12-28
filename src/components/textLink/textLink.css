@@ -1,9 +1,11 @@
 .text-link {
-    font-size: 14px;
-    text-decoration: none;
-    color: white;
-    display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
 }
-.text-link:hover {
-    cursor: pointer;
+.text-link:hover,
+.text-link:focus {
+  color: white;
+  cursor: pointer;
 }

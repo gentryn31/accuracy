@@ -6,6 +6,8 @@
   left: 0;
   width: 100vw;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: color 0.25s ease-in-out, height 0.25s ease-in-out;
 }
 
@@ -37,7 +39,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 12px;
   opacity: 0;
-  margin: 60px 9%;
+  margin: 15vh 9%;
   color: var(--blue-med);
 
   transition: opacity 0.25s ease-in-out;
@@ -80,7 +82,8 @@ a.info-details {
 
   transition: color 0.2s ease;
 }
-a.info-details:hover {
+a.info-details:hover,
+a.info-details:focus {
   color: white;
 }
 
