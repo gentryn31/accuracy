@@ -10,14 +10,15 @@ import './App.css';
 
 import Toolbar from './components/toolbar/toolbar.js';
 import Menu from './components/menu/menu.js';
-import HomePage from './pages/home.js';
-import ServicePage from './pages/service.js';
-import AboutPage from './pages/about.js';
-import ContactPage from './pages/contact.js';
-import FaqPage from './pages/faqs.js';
-import SiteMap from './pages/map.js';
-import ErrorPage from './pages/error.js';
 import Footer from './components/footer/footer.js';
+
+import HomePage from './pages/home/home.js';
+import ServicePage from './pages/service/service.js';
+import AboutPage from './pages/about/about.js';
+import ContactPage from './pages/contact/contact.js';
+import FaqPage from './pages/faqs/faqs.js';
+import SiteMap from './pages/map/map.js';
+import ErrorPage from './pages/error/error.js';
 
 class App extends Component {
   render() {

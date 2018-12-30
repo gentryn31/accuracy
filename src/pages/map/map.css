@@ -1,0 +1,39 @@
+#map-page {
+  display: flex;
+  flex-direction: column;
+}
+
+#map-section {
+  padding: 60px 9%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+#map-section > h2 {
+  margin-bottom: 10px;
+}
+
+#map-section > i {
+  color: var(--sky-med);
+  font-size: 750px;
+  position: absolute;
+  right: -10vw;
+  top: 0;
+}
+
+#site-map-links {
+  display: flex;
+  flex-direction: column;
+}
+
+#site-map-links > .text-link {
+  line-height: 25px;
+}
+#site-map-links > .text-link:hover,
+#site-map-links > .text-link:focus {
+  color: var(--blue-dark);
+}
+
+#site-map-links > h4 {
+  margin: 15px 0 7px 0;
+}

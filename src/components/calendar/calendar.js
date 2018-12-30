@@ -142,20 +142,22 @@ class Calendar extends Component {
             date={fillDate.toString()}
             status={status}
             onClick={e => {
-              this.fillCalendar(
-                displayMonth,
-                displayYear,
-                new Date(
-                  displayYear,
+              if (status == 'active') {
+                this.fillCalendar(
                   displayMonth,
-                  e.target.innerText
-                ).toString()
-              );
-              this.props.onClick(
-                e,
-                this.state.displayMonth,
-                this.state.displayYear
-              );
+                  displayYear,
+                  new Date(
+                    displayYear,
+                    displayMonth,
+                    e.target.innerText
+                  ).toString()
+                );
+                this.props.onClick(
+                  e,
+                  this.state.displayMonth,
+                  this.state.displayYear
+                );
+              }
             }}
           />
         );
@@ -185,20 +187,22 @@ class Calendar extends Component {
               date={fillDate.toString()}
               status={status}
               onClick={e => {
-                this.fillCalendar(
-                  displayMonth,
-                  displayYear,
-                  new Date(
-                    displayYear,
+                if (status == 'active') {
+                  this.fillCalendar(
                     displayMonth,
-                    e.target.innerText
-                  ).toString()
-                );
-                this.props.onClick(
-                  e,
-                  this.state.displayMonth,
-                  this.state.displayYear
-                );
+                    displayYear,
+                    new Date(
+                      displayYear,
+                      displayMonth,
+                      e.target.innerText
+                    ).toString()
+                  );
+                  this.props.onClick(
+                    e,
+                    this.state.displayMonth,
+                    this.state.displayYear
+                  );
+                }
               }}
               selected={this.props.selected}
             />

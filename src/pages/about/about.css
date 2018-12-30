@@ -1,0 +1,14 @@
+#mission {
+  padding-top: 120px;
+}
+
+#history {
+  background-color: var(--sky-light);
+}
+
+#team {
+  background-color: var(--blue-med);
+}
+#team > h3 {
+  color: white;
+}

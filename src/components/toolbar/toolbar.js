@@ -1,20 +1,19 @@
-import React, { Component } from "react";
-import { string, bool, number, any, func } from "prop-types";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { string, bool, number, any, func } from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import "./toolbar.css";
+import './toolbar.css';
 
 class Toolbar extends Component {
   render() {
     return (
-      <div className="toolbar">
-        <Link to={"/"}>
+      <div className="toolbar" id="toolbar">
+        <Link to={'/'}>
           <svg
             className="accuracy-logo"
             viewBox="0 0 158 22"
             width="158"
-            height="22"
-          >
+            height="22">
             <defs>
               <clipPath id="_clipPath_5YPLnnvW6FfdKQ47Vcf3I0c0IMrloJE8">
                 <rect width="158" height="22" />

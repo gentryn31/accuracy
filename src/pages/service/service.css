@@ -1,0 +1,21 @@
+#service-page {
+  display: flex;
+  flex-direction: column;
+}
+
+#service-info-section {
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+#service-section > h2 {
+  margin-bottom: 40px;
+}
+
+#service-info-section > i {
+  color: var(--sky-med);
+  font-size: 750px;
+  position: absolute;
+  right: -10vw;
+  top: 20px;
+}

@@ -1,0 +1,22 @@
+#faq-page {
+  display: flex;
+  flex-direction: column;
+}
+
+#faq-section {
+  flex-grow: 1;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+#faq-section > h2 {
+  margin-bottom: 40px;
+}
+
+#faq-section > i {
+  color: var(--sky-med);
+  font-size: 750px;
+  position: absolute;
+  right: -10vw;
+  top: 20px;
+}

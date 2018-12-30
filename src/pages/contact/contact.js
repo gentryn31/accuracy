@@ -1,13 +1,13 @@
 import React from 'react';
 
-class SiteMap extends React.Component {
+class ContactPage extends React.Component {
   render() {
     return (
       <div className="page">
-        <h1>Site Map</h1>
+        <h2>Get in Touch.</h2>
       </div>
     );
   }
 }
 
-export default SiteMap;
+export default ContactPage;

@@ -12,6 +12,7 @@
 @media screen and (max-width: 599px) {
   .toolbar {
     padding: 24px 24px;
+    min-height: 74px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 999px) {
@@ -22,5 +23,6 @@
 @media screen and (min-width: 1000px) and (max-width: 1499px) {
   .toolbar {
     padding: 42px 9% 0 9%;
+    min-height: 68px;
   }
 }
