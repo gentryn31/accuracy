@@ -2,7 +2,7 @@
   text-align: center;
 }
 .calendar-date.day {
-  color: var(--sky-med);
+  color: var(--blue-med);
 }
 .calendar-date.inactive {
   color: #cacaca;

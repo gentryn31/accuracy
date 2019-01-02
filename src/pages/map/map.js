@@ -5,6 +5,10 @@ import TextLink from '../../components/textLink/textLink.js';
 import './map.css';
 
 class SiteMap extends React.Component {
+  componentDidMount() {
+    document.getElementById('toolbar').scrollIntoView();
+  }
+
   render() {
     return (
       <div className="page" id="map-page">

@@ -1,12 +1,11 @@
 #faq-page {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 #faq-section {
-  flex-grow: 1;
   overflow: hidden;
   padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 #faq-section > h2 {
@@ -18,5 +17,23 @@
   font-size: 750px;
   position: absolute;
   right: -10vw;
-  top: 20px;
+  bottom: -25vh;
+  z-index: -1;
+}
+
+.faq {
+  width: calc((73vw / 2) + 9vw);
+  margin-bottom: 18px;
+}
+
+.question {
+  margin-bottom: 8px;
+}
+
+.answer > a {
+  color: var(--blue-med);
+  transition: color 0.3s ease;
+}
+.answer > a:hover {
+  color: var(--gray-dark);
 }

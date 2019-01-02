@@ -1,0 +1,36 @@
+.employeeView { 
+    background-color: var(--sky-light);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 24px;
+    margin: 12px;
+}
+.employee-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+.employee-picture {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+.employee-text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.employee-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--sky-dark);
+}
+.employee-position {
+    font-size: 14px;
+    color: var(--blue-med);
+}
+.employee-description {
+    font-size: 14px;
+}

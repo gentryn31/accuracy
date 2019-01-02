@@ -110,6 +110,15 @@ a.info-details:focus {
     margin-bottom: 15px;
   }
 }
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+
+}
+@media screen and (min-width: 1200px) {
+  #menu-button {
+    top: 30px;
+    right: calc(((100vw - 985px) / 2) - 24px);
+  }
+}
 
 #menu-copyright {
   font-size: 14px;

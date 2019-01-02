@@ -1,15 +1,15 @@
-#service-page {
-  display: flex;
-  flex-direction: column;
-}
 
 #service-info-section {
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
-#service-section > h2 {
-  margin-bottom: 40px;
+#service-info-section > h2 {
+  margin-bottom: 25px;
+}
+
+#service-info-section > p {
+  width: calc((100vw - 27vw)/2);
 }
 
 #service-info-section > i {
@@ -18,4 +18,50 @@
   position: absolute;
   right: -10vw;
   top: 20px;
+}
+
+#service-pricing-section {
+  position: relative;
+  background-color: var(--sky-light);
+}
+
+#pricing-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0;
+  margin: 24px -12px -12px -12px;
+}
+
+.price-tag {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 18px 14px;
+  margin: 12px;
+  background-color: white;
+  border-radius: 3px;
+}
+.tag-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--sky-dark);
+  margin-bottom: 8px;
+}
+.tag-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+}
+.tag-description {
+  font-size: 14px;
+  color: var(--blue-med);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.tag-condition {
+  font-size: 14px;
+  color: var(--blue-dark);
+  margin-bottom: 20px;
 }

@@ -5,6 +5,10 @@ import Button from '../../components/button/button.js';
 import './error.css';
 
 class ErrorPage extends React.Component {
+  componentDidMount() {
+    document.getElementById('toolbar').scrollIntoView();
+  }
+
   render() {
     return (
       <div className="page" id="error-page">

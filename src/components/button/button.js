@@ -54,7 +54,7 @@ class Button extends Component {
         id={id}
         tabIndex={0}
         onClick={() => {
-          this.props.active ? this.props.onClick() : '';
+          if (this.props.active) { this.props.onClick(); }
         }}>
         {this.props.text}
         {this.props.arrow ? (

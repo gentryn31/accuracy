@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { string, bool, number, any, func } from 'prop-types';
 import { Link } from 'react-router-dom';
+import * as firebase from 'firebase';
 
 import Button from '../../components/button/button.js';
 import Calendar from '../../components/calendar/calendar.js';
@@ -66,7 +67,42 @@ class Homepage extends Component {
     });
   };
 
-  submitForm = () => {};
+  submitForm = () => {
+    const messageId = this.generateId();
+
+    const company = this.state.contactForm.company;
+    const date = this.state.contactForm.date;
+    const email = this.state.contactForm.email;
+    const message = this.state.contactForm.message;
+    const name = this.state.contactForm.name;
+
+    const that = this;
+    
+    firebase.database().ref('messages/' + messageId).set({
+      company: company,
+      date: date,
+      email: email,
+      message: message,
+      name: name,
+      service: "",
+    }).then(() => {
+      that.clearForm();
+      const confirmation = document.querySelector('.schedule-form-confirmation');
+      confirmation.innerHTML = "Thank you for reaching out. We'll get back to you through email with more information as soon as possible.";
+      confirmation.className = 'schedule-form-confirmation active';
+    });
+  };
+
+  generateId = () => {
+    let id = "";
+    const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    for (let i = 0; i < 10; i++) {
+        id += chars[Math.floor(Math.random() * 62)];
+    }
+
+    return id;
+  }
 
   render() {
     const customTimer = (
@@ -138,9 +174,7 @@ class Homepage extends Component {
           <div id="hero-image">
             <svg
               id="material-timer"
-              viewBox="0 0 24 24"
-              width="750"
-              height="750">
+              viewBox="0 0 24 24">
               <defs>
                 <clipPath id="_clipPath_iOw5USY1ALwi2s8dLniiAGbEETD5YqY3">
                   <rect width="24" height="24" />
@@ -352,9 +386,10 @@ class Homepage extends Component {
                   src={require('../../assets/crowder.png')}
                   alt="Portrait of Steven Crowder"
                 />
-                <p className="testimonial-author-name">
-                  Steven Crowder, Alpha Solutions
-                </p>
+                <div className="testimonial-name-container">
+                  <p className="testimonial-author-name">Steven Crowder</p>
+                  <p className="testimonial-author-company">Alpha Solutions</p>
+                </div>
               </div>
             </div>
             <div className="testimonial">
@@ -370,9 +405,10 @@ class Homepage extends Component {
                   src={require('../../assets/ford.png')}
                   alt="Portrait of Kimberly Ford"
                 />
-                <p className="testimonial-author-name">
-                  Kimberly Ford, Acme Marketing
-                </p>
+                <div className="testimonial-name-container">
+                  <p className="testimonial-author-name">Kimberly Ford</p>
+                  <p className="testimonial-author-company">Acme Marketing</p>
+                </div>
               </div>
             </div>
           </div>
@@ -473,6 +509,8 @@ class Homepage extends Component {
                 }}
               />
             </div>
+          </div>
+          <div className="schedule-form-confirmation">
           </div>
         </div>
       </div>

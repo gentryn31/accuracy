@@ -1,14 +1,58 @@
 #mission {
-  padding-top: 120px;
+  padding-top: 140px;
 }
+
+#mission > div {
+  width: 60%;
+  font-size: 30px;
+  color: var(--blue-dark);
+}
+#mission > div > span {
+  font-weight: 700;
+  color: var(--sky-dark);
+}
+
+#mission > i {
+  color: var(--sky-med);
+  font-size: 750px;
+  position: absolute;
+  right: -10vw;
+  top: 20px;
+}
+
 
 #history {
   background-color: var(--sky-light);
+  position: relative;
 }
 
-#team {
-  background-color: var(--blue-med);
+#history > h3 {
+  margin-bottom: 36px;
 }
+
+#history > p {
+  width: calc(((100vw - 27vw) / 2) + 9vw);
+}
+
+#history > img {
+  width: calc((100vw - 36vw) / 2);
+  position: absolute;
+  right: 9vw;
+  bottom: 130px;
+}
+
 #team > h3 {
-  color: white;
+  margin-bottom: 36px;
+}
+
+#employeeContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  margin: -12px;
+}
+
+#employeeContainer > div {
+  display: flex;
+  flex-direction: column;
 }
