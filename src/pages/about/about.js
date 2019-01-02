@@ -39,9 +39,9 @@ class AboutPage extends React.Component {
             For us, everything and more.
           </h3>
           <p>
-            In 2017, Drew Stanton left Deloitte to start a firm that was centered around the backbone of the American economy - private, entrepreneurial businesses. He founded Accuracy with a group of co-workers and together they worked towards a no-compormises financial company for those just getting off the ground. The result was a company that promised quality accounting services to young companies without the astronomical price tag. 
+            In 2017, Drew Stanton left Deloitte to start a firm that was centered around the backbone of the American economy - private, entrepreneurial businesses. He founded Accuracy with a group of co-workers and together they worked towards a no-compromises financial company for those just getting off the ground. The result was a company that promised quality accounting services to young companies without the astronomical price tag. 
           </p>
-          <img src={require('../../assets/history.png')} alt="The History of Accuracy" />
+          <div className="about-history-tint" />
         </div>
         <div id="team" className="section">
           <h3>Get to Know the Team</h3>

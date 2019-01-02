@@ -364,12 +364,8 @@ class Homepage extends Component {
               onClick={() => this.props.history.push('/about#team')}
             />
           </div>
-          <div id="about-team-image">
-            <img
-              src={require('../../assets/team.png')}
-              alt="The accuracy team"
-            />
-          </div>
+          
+          <div className="about-team-tint" />
         </div>
         <div className="section" id="testimonials-section">
           <h3 id="testimonial-title">The Results are In</h3>

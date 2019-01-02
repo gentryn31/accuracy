@@ -65,12 +65,7 @@
   fill: white;
 }
 
-@media screen and (max-width: 599px) {
-  .button {
-    width: 100%;
-    text-align: center;
-  }
-}
+
 
 @keyframes text-flash {
   0% {

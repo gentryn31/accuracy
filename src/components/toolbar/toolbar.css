@@ -12,12 +12,20 @@
 @media screen and (max-width: 599px) {
   .toolbar {
     padding: 24px 24px;
-    min-height: 74px;
+    padding-bottom: 0;
+    min-height: 50px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 799px) {
+  .toolbar {
+    padding: calc(42px + (800px - 100vw) * (-18 / 200)) calc(108px + (1200px - 100vw) * (-84 / 600));
+    padding-bottom: 0;
+    min-height: calc(68px + (800px - 100vw) * (-18 / 200));
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   .toolbar {
-    padding: 42px 9vw;
+    padding: 42px calc(108px + (1200px - 100vw) * (-84 / 600));
     padding-bottom: 0;
     min-height: 68px;
   }

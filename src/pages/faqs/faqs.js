@@ -17,7 +17,6 @@ class FaqPage extends React.Component {
             <br />
             We have answers.
           </h2>
-          <i className="material-icons">help</i>
           <div className="faq">
             <h4 className="question">Is support included?</h4>
             <p className="answer">Yes, customer support is included in all of our plans. We encourage you to ask questions so your finances are off of your hands, but you stay up-to-date with your business.</p>

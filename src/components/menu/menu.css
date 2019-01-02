@@ -14,8 +14,7 @@
 #menu-button {
   padding: 12px;
   position: fixed;
-  top: 30px;
-  right: calc(9% - 24px);
+  
 }
 #menu-button:hover {
   cursor: pointer;
@@ -87,7 +86,7 @@ a.info-details:focus {
   color: white;
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 599px) {
   .menu {
     overflow-y: scroll;
   }
@@ -110,21 +109,21 @@ a.info-details:focus {
     margin-bottom: 15px;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 799px) {
+  #menu-button {
+    top: calc(30px + (800px - 100vw) * (-24 / 200));
+    right: calc((108px + (1200px - 100vw) * (-84 / 600)) - 24px);
+  }
+}
 @media screen and (min-width: 800px) and (max-width: 1199px) {
-
+  #menu-button {
+    top: 30px;
+    right: calc((108px + (1200px - 100vw) * (-84 / 600)) - 24px);
+  }
 }
 @media screen and (min-width: 1200px) {
   #menu-button {
     top: 30px;
     right: calc(((100vw - 985px) / 2) - 24px);
   }
-}
-
-#menu-copyright {
-  font-size: 14px;
-  margin-top: 60px;
-  color: var(--blue-med);
-  position: absolute;
-  bottom: 48px;
-  left: 9vw;
 }

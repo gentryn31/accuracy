@@ -12,21 +12,13 @@
   margin-bottom: 40px;
 }
 
-#faq-section > i {
-  color: var(--sky-med);
-  font-size: 750px;
-  position: absolute;
-  right: -10vw;
-  bottom: -25vh;
-  z-index: -1;
-}
-
 .faq {
-  width: calc((73vw / 2) + 9vw);
+  width: 100%;
   margin-bottom: 18px;
 }
 
 .question {
+  width: 100%;
   margin-bottom: 8px;
 }
 
@@ -36,4 +28,20 @@
 }
 .answer > a:hover {
   color: var(--gray-dark);
+}
+
+@media screen and (max-width: 400px) {
+  .faq {
+    width: 352px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 1199px) {
+  .faq {
+    width: calc(546px + (1200px - 100vw) * (-194 / 800));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq {
+    width: 546px;
+  }
 }
