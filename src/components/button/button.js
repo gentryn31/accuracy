@@ -5,7 +5,7 @@ import './button.css';
 
 class Button extends Component {
   componentDidMount() {
-    document.removeEventListener('keyup', e => {
+    document.addEventListener('keyup', e => {
       if (
         e.keyCode == 13 &&
         this.props.active &&
