@@ -12,11 +12,3 @@
 #error-section > h2 {
   margin-bottom: 40px;
 }
-
-#error-section > i {
-  color: var(--sky-med);
-  font-size: 750px;
-  position: absolute;
-  right: -10vw;
-  top: 20px;
-}

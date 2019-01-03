@@ -4,7 +4,7 @@
 }
 
 #map-section {
-  padding: 60px 9%;
+  padding-top: 80px;
   flex-grow: 1;
   overflow: hidden;
 }
@@ -27,11 +27,12 @@
 }
 
 #site-map-links > .text-link {
+  color: var(--gray-dark);
   line-height: 25px;
 }
 #site-map-links > .text-link:hover,
 #site-map-links > .text-link:focus {
-  color: var(--blue-dark);
+  color: var(--sky-dark);
 }
 
 #site-map-links > h4 {

@@ -1,7 +1,6 @@
 
 #service-info-section {
   overflow: hidden;
-  padding-top: 140px;
 }
 
 #service-info-section > h2 {
@@ -10,6 +9,8 @@
 
 #service-info-section > p {
   width: calc((100vw - 27vw)/2);
+  position: relative;
+  z-index: 1;
 }
 
 #service-info-section > i {
@@ -17,7 +18,8 @@
   font-size: 750px;
   position: absolute;
   right: -10vw;
-  top: 20px;
+  bottom: -200px;
+  z-index: 0;
 }
 
 #service-pricing-section {
@@ -64,4 +66,86 @@
   font-size: 14px;
   color: var(--blue-dark);
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  #service-info-section {
+    padding-top: 80px;
+    padding-bottom: 225px;
+  }
+  #service-info-section > p {
+    width: 100%;
+  }
+  #service-info-section > i {
+    font-size: calc(100vw - 48px);
+    right: 24px;
+    bottom: -120px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 499px) {
+  #service-info-section {
+    padding-top: calc(140px + (1200px - 100vw) * (-60 / 800));
+    padding-bottom: calc(180px + (1200px - 100vw) * (45 / 800));
+  }
+  #service-info-section > p {
+    width: calc(438px + (1200px - 100vw) * (-86 / 800));
+  }
+  #service-info-section > i {
+    font-size: calc(750px + (1200px - 100vw) * (-398 / 800));
+    right: calc(-120px + (1200px - 100vw) * (144 / 800));
+    bottom: calc(-200px + (1200px - 100vw) * (80 / 800));
+  }
+}
+@media screen and (max-width: 499px) {
+  #service-info-section {
+    padding-top: calc(140px + (1200px - 100vw) * (-60 / 800));
+    padding-bottom: calc(180px + (1200px - 100vw) * (45 / 800));
+  }
+  #pricing-details {
+    grid-template-columns: 1fr;
+  }
+  #service-info-section > i {
+    font-size: calc(750px + (1200px - 100vw) * (-398 / 800));
+    right: calc(-120px + (1200px - 100vw) * (144 / 800));
+    bottom: calc(-200px + (1200px - 100vw) * (80 / 800));
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 999px) {
+  #service-info-section {
+    padding-top: calc(140px + (1200px - 100vw) * (-60 / 800));
+    padding-bottom: calc(180px + (1200px - 100vw) * (45 / 800));
+  }
+  #service-info-section > p {
+    width: calc(438px + (1200px - 100vw) * (-86 / 800));
+  }
+  #pricing-details {
+    grid-template-columns: 1fr 1fr;
+  }
+  #service-info-section > i {
+    font-size: calc(750px + (1200px - 100vw) * (-398 / 800));
+    right: calc(-120px + (1200px - 100vw) * (144 / 800));
+    bottom: calc(-200px + (1200px - 100vw) * (80 / 800));
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  #service-info-section {
+    padding-top: calc(140px + (1200px - 100vw) * (-60 / 800));
+    padding-bottom: calc(180px + (1200px - 100vw) * (45 / 800));
+  }
+  #service-info-section > p {
+    width: calc(438px + (1200px - 100vw) * (-86 / 800));
+  }
+  #service-info-section > i {
+    font-size: calc(750px + (1200px - 100vw) * (-398 / 800));
+    right: calc(-120px + (1200px - 100vw) * (144 / 800));
+    bottom: calc(-200px + (1200px - 100vw) * (80 / 800));
+  }
+}
+@media screen and (min-width: 1200px) {
+  #service-info-section {
+    padding-top: 140px;
+  }
+  #service-info-section > p {
+    width: 438px;
+  }
 }

@@ -24,7 +24,6 @@ class ErrorPage extends React.Component {
               this.props.history.push('/');
             }}
           />
-          <i className="material-icons">error_outline</i>
         </div>
       </div>
     );

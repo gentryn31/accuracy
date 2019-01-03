@@ -1,9 +1,6 @@
-#mission {
-  padding-top: 140px;
-}
-
 #mission > div {
-  width: 60%;
+  position: relative;
+  z-index: 1;
   font-size: 30px;
   color: var(--blue-dark);
 }
@@ -17,11 +14,13 @@
   font-size: 750px;
   position: absolute;
   right: -10vw;
-  top: 20px;
+  bottom: -235px;
+  z-index: 0;
 }
 
 
 #history {
+  background-color: var(--sky-med);
   background-image: url("../../assets/history-background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,4 +63,58 @@
 #employeeContainer > div {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 400px) {
+  #mission {
+    padding-top: 80px;
+    padding-bottom: 180px;
+  }
+  #mission > div{
+    width: 100%;
+  }
+  #mission > i {
+    font-size: calc(100vw - 48px);
+    right: 24px;
+    bottom: -120px;
+  }
+  #history > p{
+    width: 100%;
+  }
+  #employeeContainer {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 799px) {
+  #employeeContainer {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 1199px) {
+  #mission {
+    padding-top: calc(140px + (1200px - 100vw) * (-60 / 800));
+    padding-bottom: 180px;
+  }
+  #mission > div {
+    width: calc(582px + (1200px - 100vw) * (-230 / 800));
+  }
+  #mission > i {
+    font-size: calc(750px + (1200px - 100vw) * (-398 / 800));
+    right: calc(-120px + (1200px - 100vw) * (144 / 800));
+    bottom: calc(-235px + (1200px - 100vw) * (115 / 800));
+  }
+  #history > p {
+    width: calc(535px + (1200px - 100vw) * (-183 / 800));
+  }
+}
+@media screen and (min-width: 1200px) {
+  #mission {
+    padding-top: 140px;
+    padding-bottom: 180px;
+  }
+  #mission > div {
+    width: 582px;
+  }
+  #history > p {
+    width: 535px;
+  }
 }

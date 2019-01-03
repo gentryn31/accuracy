@@ -4,33 +4,38 @@
 }
 
 #contact-section {
+    position: relative;
     overflow: hidden;
     padding-top: 100px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
 
-#contact-section > i {
-    color: var(--sky-med);
-    font-size: 750px;
+}
+.contact-tint {
     position: absolute;
-    right: -10vw;
-    top: 20px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0.92;
 }
 
-
-#contact-section > h4 {
-    margin: 15px 0 7px 0;
+#contact-title {
+    position: relative;
+    z-index: 1;
 }
 
 #contact-section > .text-link,
 #contact-section > p {
     line-height: 25px;
-    color: var(--blue-med);
+    color: var(--gray-dark);
     font-size: 14px;
+    position: relative;
+    z-index: 1;
 }   
 #contact-section > .text-link:hover,
 #contact-section > .text-link:focus {
-    color: var(--blue-dark);
+    color: var(--sky-dark);
 }

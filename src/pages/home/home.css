@@ -105,9 +105,6 @@ a:focus > div > .heading-arrow {
   z-index: 1;
 }
 
-#about-team-title {
-}
-
 #about-team-paragraph {
   margin: 24px 0;
 }
@@ -245,7 +242,7 @@ textarea:focus {
     padding-bottom: 215px;
   }
   #hero-text {
-    width: 352px;
+    width: 100%;
     z-index: 1;
   }
   #hero-subtitle {
@@ -265,18 +262,18 @@ textarea:focus {
   #services-text {
     grid-template-columns: 1fr;
     grid-row-gap: 18px;
-    width: 352px;
+    width: 100%;
   }
   #about-team-section {
     flex-direction: column;
   }
   #about-team-text {
-    width: 352px;
+    width: 100%;
   }
   .testimonials {
     grid-template-columns: 1fr;
     grid-row-gap: 18px;
-    width: 352px;
+    width: 100%;
   }
   #schedule-section {
     grid-template-columns: 1fr;

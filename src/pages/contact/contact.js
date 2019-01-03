@@ -13,17 +13,17 @@ class ContactPage extends React.Component {
     return (
       <div className="page" id="contact-page">
         <div className="section" id="contact-section">
-          <h2>Get in Touch</h2>
-          <i className="material-icons">phone_in_talk</i>
-          <h4>Phone</h4>
+          <h2 id="contact-title">Get in Touch</h2>
+          <h6>Phone</h6>
           <p>(816) 435-6821</p>
-          <h4>Email</h4>
+          <h6>Email</h6>
           <TextLink link="mailto:help@accuracy.com" text="help@accuracy.com" />
-          <h4>Social</h4>
+          <h6>Social</h6>
           <TextLink link="https://www.twitter.com" text="Twitter" />
           <TextLink link="https://www.instagram.com" text="Instagram" />
           <TextLink link="https://www.facebook.com" text="Facebook" />
           <TextLink link="https://www.youtube.com" text="YouTube" />
+          <div className="contact-tint" />
         </div>
       </div>
     );
