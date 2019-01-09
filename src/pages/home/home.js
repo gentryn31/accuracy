@@ -314,7 +314,7 @@ class Homepage extends Component {
                 </div>
               </Link>
               <p className="service-paragraph" id="annual-reports-content">
-                Our team has trained on writing annual reports for small
+                Our team is trained on writing annual reports for small
                 businesses, so you can spend your time on growing your company.
               </p>
             </div>
@@ -341,7 +341,7 @@ class Homepage extends Component {
                 </div>
               </Link>
               <p className="service-paragraph" id="consulting-content">
-                You have the vision. We have the experience to guide you through
+                You have the vision; we have the experience to guide you through
                 the ups and downs and lead your company to its goals.
               </p>
             </div>
@@ -355,7 +355,7 @@ class Homepage extends Component {
               by Accuracy’s high standard. They stay by your side throughout
               your company’s journey and become invested in the work you are
               doing. Because of this loyalty and consistency, you gain a team
-              that wants to see you succeed and are always up to date with your
+              that wants to see you succeed and is always up to date with your
               startup’s financial goals and status. They come with all the
               benefits of hiring your own team, without the in-house cost.{' '}
             </p>
@@ -374,7 +374,7 @@ class Homepage extends Component {
               <h2 className="testimonial-quote-mark">“</h2>
               <p className="testimonial-quote">
                 Accuracy radically transformed the way we kept track of our
-                finances and spent our time. It really was a game changer.
+                finances and spent our time. They really were a game changer.
               </p>
               <div className="testimonial-author">
                 <img

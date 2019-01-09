@@ -221,7 +221,7 @@ class ServicePage extends React.Component {
       'Annual Reports': {
         name: 'Annual Reports',
         icon: 'date_range',
-        description: 'A well-written, information annaul report is the first step to getting new investors and maintaining trust in existing investors. Our experience writing for young, growing companies brings professionalism to your reports while saving you time.',
+        description: 'A well-written, information annual report is the first step to getting new investors and maintaining trust in existing investors. Our experience writing for young, growing companies brings professionalism to your reports while saving you time.',
         pricing: [
           {
             name: "Small",

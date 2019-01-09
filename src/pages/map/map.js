@@ -20,6 +20,7 @@ class SiteMap extends React.Component {
             <TextLink link={'/about'} text="About" />
             <TextLink link={'/contact'} text="Contact" />
             <TextLink link={'/faqs'} text="FAQs" />
+            <TextLink link={'/copyright'} text="Copyright Info" />
             <h6>Services</h6>
             <TextLink link={'/services/bookkeeping'} text="Bookkeeping" />
             <TextLink link={'/services/taxes'} text="Taxes" />

@@ -1,25 +1,19 @@
-#contact-page {
-    display: flex;
-    flex-direction: column;
-}
-
 #contact-section {
     position: relative;
     overflow: hidden;
     padding-top: 100px;
-    flex-grow: 1;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#contact-section > div,
+#contact-section > form {
     display: flex;
     flex-direction: column;
-
 }
-.contact-tint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    opacity: 0.92;
+
+#contact-section > form > .button {
+    align-self: flex-start;
 }
 
 #contact-title {
@@ -27,15 +21,29 @@
     z-index: 1;
 }
 
-#contact-section > .text-link,
-#contact-section > p {
+#contact-section > div > .text-link,
+#contact-section > div > a,
+#contact-section > div > p {
     line-height: 25px;
     color: var(--gray-dark);
     font-size: 14px;
     position: relative;
     z-index: 1;
+    transition: color 0.3s ease;
 }   
-#contact-section > .text-link:hover,
-#contact-section > .text-link:focus {
+#contact-section > div > .text-link:hover,
+#contact-section > div > a:hover,
+#contact-section > div > .text-link:focus {
     color: var(--sky-dark);
+}
+
+.schedule-form-confirmation {
+    margin: 25px 0;
+}
+
+@media screen and (max-width: 799px) {
+    #contact-section {
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+    }
 }

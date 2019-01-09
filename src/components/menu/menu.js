@@ -201,6 +201,19 @@ class Menu extends React.Component {
             <p className={`info-details`}>(816) 435-6821</p>
             <div className="menu-spacer" />
             <TextLink
+              text="Copyright Info"
+              link="/copyright"
+              onClick={() => {
+                this.setState({ status: 'inactive' });
+              }}
+              onFocus={() => {
+                this.setState({ status: 'active' });
+              }}
+              onBlur={() => {
+                this.setState({ status: 'inactive' });
+              }}
+            />
+            <TextLink
               text="Site Map"
               link="/site-map"
               onClick={() => {
