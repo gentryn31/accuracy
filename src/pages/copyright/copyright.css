@@ -3,11 +3,11 @@
 }
 
 .copyright-paragraph > a {
-    color: var(--gray-dark);
+    color: var(--sky-dark);
     transition: color 0.3s ease;
 }
 .copyright-paragraph > a:hover {
-    color: var(--sky-dark);
+    color: var(--gray-dark);
 }
 
 @media screen and (max-width: 400px) {

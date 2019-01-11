@@ -1,0 +1,122 @@
+#dashboard-section {
+    padding-top: 80px;
+}
+#employee-header {
+    display: flex;
+    flex-direction: row;
+}
+.dashboard-picture {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+}
+.dashboard-title {
+    line-height: 36px;
+    margin-left: 24px;
+    flex-grow: 1;
+    font-size: 25px;
+}
+#logout-button {
+    align-self: center;
+    color: var(--blue-med);
+    transition: color 0.3s ease;
+}
+#logout-button:hover,
+#logout-button:focus {
+    color: var(--blue-dark);
+    animation: none;
+}
+#logout-button > svg {
+    fill: var(--blue-med);
+    transition: fill 0.3s ease;
+}
+#logout-button:hover > svg,
+#logout-button:focus > svg {
+    fill: var(--blue-dark);
+}
+
+.message-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: -12px;
+    margin-top: 32px;
+    grid-gap: 24px;
+}
+.message-board > div > h4 {
+    margin-left: 12px;
+}
+
+.message {
+    padding: 24px 32px;
+    border-radius: 3px;
+    margin: 12px;
+    background-color: var(--sky-light);
+}
+.message.resolved {
+    background-color: var(--gray-light);
+}
+.message.resolved:hover {
+    background-color: var(--gray-light);
+    box-shadow: none;
+    cursor: auto;
+}
+#resolve-button {
+    margin-top: 18px;
+    background-color: var(--blue-dark);
+}
+#resolve-button:focus {
+    background-color: var(--blue-med);
+    animation: none;
+}
+
+.message-author {
+    font-size: 20px;
+}
+.message-company, 
+.message-date,
+.message-email,
+.message-paragraph,
+.message-resolved {
+    color: var(--gray-dark);
+    font-size: 14px;
+    line-height: 24px;
+}
+.message-resolved {
+    font-style: italic;
+}
+
+.message-email > span {
+    color: var(--blue-dark);
+    transition: color 0.3s ease;
+}
+.message-email > span:hover {
+    color: var(--blue-med);
+}
+
+.schedule-messages > h6,
+.query-messages > h6 {
+    color: var(--blue-med);
+    margin-left: 12px;
+}
+
+.schedule-messages > p,
+.query-messages > p {
+    padding: 24px 12px;
+    text-align: left;
+    color: #cacaca;
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard-picture {
+        display: none;
+    }
+    .dashboard-title {
+        margin-left: 0;
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .message-board {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,34 @@
+#auth-form {
+    width: 352px;
+    margin: auto;
+}
+
+#auth-form > h2 {
+    margin-bottom: 24px;
+}
+
+.auth-input {
+    margin: 5px 0 12px 0;
+}
+
+#auth-form-error-message {
+    display: none;
+}
+#auth-form-error-message.active {
+    position: absolute;
+    display: block;
+    margin-top: 32px;
+    padding: 24px;
+    background-color: var(--sky-light);
+    color: var(--blue-dark);
+}
+
+#login-button {
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 400px) {
+    #auth-form {
+        width: 100%;
+    }
+}

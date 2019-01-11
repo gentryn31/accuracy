@@ -125,7 +125,7 @@ class ContactPage extends React.Component {
               }}
             />
             <Button
-              text="Schedule"
+              text="Send"
               active={
                 this.state.contactForm.email != '' &&
                 this.state.contactForm.name != '' &&

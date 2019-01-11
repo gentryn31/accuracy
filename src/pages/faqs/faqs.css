@@ -23,7 +23,7 @@
 }
 
 .answer > a {
-  color: var(--blue-med);
+  color: var(--sky-dark);
   transition: color 0.3s ease;
 }
 .answer > a:hover {

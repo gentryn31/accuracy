@@ -20,6 +20,8 @@ import ContactPage from './pages/contact/contact.js';
 import FaqPage from './pages/faqs/faqs.js';
 import CopyrightPage from './pages/copyright/copyright.js';
 import SiteMap from './pages/map/map.js';
+import AuthPage from './pages/auth/auth.js';
+import DashboardPage from './pages/dashboard/dashboard.js';
 import ErrorPage from './pages/error/error.js';
 
 class App extends Component {
@@ -37,11 +39,14 @@ class App extends Component {
         // User is signed in.
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
-        console.log(uid);
         // ...
       } else {
-        // User is signed out.
-        // ...
+        firebase.auth().signInAnonymously().catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // ...
+        });
       }
       // ...
     });
@@ -67,6 +72,8 @@ class App extends Component {
             <Route exact path="/faqs" component={FaqPage} />
             <Route exact path="/copyright" component={CopyrightPage} />
             <Route exact path="/site-map" component={SiteMap} />
+            <Route exact path="/auth" component={AuthPage} />
+            <Route exact path="/dashboard" component={DashboardPage} />
             <Route exact path="/404" component={ErrorPage} />
             <Redirect to="/404" />
           </Switch>
