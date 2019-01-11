@@ -159,7 +159,7 @@ class ServicePage extends React.Component {
       Taxes: {
         name: 'Taxes',
         icon: 'account_balance',
-        description: 'Tax season is stressful. Our tax specialists keep updated on the ever-changing tax codes to maximize savings and minimize pain for your business. Just hand off your books once a year and we\'ll take care of the hard part. If you use Accuracy for bookkeeping, the process is even smoother and cheaper, as well.',
+        description: 'Tax season is stressful. Our tax specialists keep updated on the ever-changing tax codes to maximize savings and minimize pain for your business. Just hand off your books once a year and we will take care of the hard part. If you use Accuracy for bookkeeping, the process is even smoother and cheaper, as well.',
         pricing: [
           {
             name: "Small",
@@ -221,7 +221,7 @@ class ServicePage extends React.Component {
       'Annual Reports': {
         name: 'Annual Reports',
         icon: 'date_range',
-        description: 'A well-written, information annual report is the first step to getting new investors and maintaining trust in existing investors. Our experience writing for young, growing companies brings professionalism to your reports while saving you time.',
+        description: 'A well-written, informational annual report is the first step to getting new investors and maintaining trust in existing investors. Our experience writing for growing companies brings professionalism to your reports while saving you time.',
         pricing: [
           {
             name: "Small",
@@ -252,7 +252,7 @@ class ServicePage extends React.Component {
       Consulting: {
         name: 'Consulting',
         icon: 'forum',
-        description: 'Our experience with a variety young companies gives us a unique advantage in giving advice to your company. Whether you are launching a new product line or looking to refresh existing ones, we can take lessons learned from similar situations to help you avoid mistakes the first time.',
+        description: 'Our experience with a variety of startups gives us a unique advantage in giving advice to your company. Whether you are launching a new product line or looking to refresh existing ones, we can take lessons learned from similar situations to help you avoid mistakes the first time.',
         pricing: [
           {
             name: "Organizational",

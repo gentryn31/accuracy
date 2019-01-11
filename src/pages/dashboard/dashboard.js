@@ -77,7 +77,7 @@ class DashboardPage extends React.Component {
                                 <p className="message-author">{ messageData.name }</p>
                                 <p className="message-company">Company: { messageData.company }</p>
                                 <a className="message-email" href={`mailto:${ messageData.email }`}>Email: <span>{ messageData.email }</span></a>
-                                <p className="message-service">{ messageData.service }</p>
+                                <p className="message-service">Service: { messageData.service ? messageData.service : 'None' }</p>
                                 <p className="message-date">Date: { date.getMonth() + 1 }/{ date.getDate() }/{ date.getFullYear() }</p>
                                 <p className="message-paragraph">Message: { messageData.message }</p>
                                 <p className="message-resolved">Resolved by { messageData.resolved }</p>
@@ -89,7 +89,7 @@ class DashboardPage extends React.Component {
                                 <p className="message-author">{ messageData.name }</p>
                                 <p className="message-company">Company: { messageData.company }</p>
                                 <a className="message-email" href={`mailto:${messageData.email}`}>Email: <span>{ messageData.email }</span></a>
-                                <p className="message-service">{ messageData.service }</p>
+                                <p className="message-service">Service: { messageData.service ? messageData.service : 'None' }</p>
                                 <p className="message-date">Date: { date.getMonth() + 1 }/{ date.getDate() }/{ date.getFullYear() }</p>
                                 <p className="message-paragraph">Message: { messageData.message }</p>
                                 <Button text="Resolve" onClick={() => {

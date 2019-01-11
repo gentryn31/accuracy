@@ -39,7 +39,7 @@ class AboutPage extends React.Component {
             For us, everything and more.
           </h3>
           <p>
-            In 2017, Drew Stanton left Deloitte to start a firm that was centered around the backbone of the American economy - private, entrepreneurial businesses. He founded Accuracy with a group of co-workers, and together they worked towards a no-compromises financial company for those just getting off the ground. The result was a company that promised quality accounting services to young companies without the astronomical price tag. 
+            In 2017, Drew Stanton left Deloitte to start a firm that was centered around the backbone of the American economy - private, entrepreneurial businesses. He founded Accuracy with a group of co-workers, and together they worked towards a no-compromises financial company for those just getting off the ground. The result was a company that promised quality accounting services to startups without the astronomical price tag. 
           </p>
           <div className="about-history-tint" />
         </div>
@@ -47,7 +47,7 @@ class AboutPage extends React.Component {
           <h3>Get to Know the Team</h3>
           <div id="employeeContainer">
             <div>
-              <EmployeeView name="Drew Stanton" position="CEO" filename="stanton.png" description="Drew is the co-founder and CEO of Accuracy. After a career at Deloitte, he headed off to start his own company focused on growing businesses. He works hands-on with young companies while running Accuracy." />
+              <EmployeeView name="Drew Stanton" position="CEO" filename="stanton.png" description="Drew is the co-founder and CEO of Accuracy. After a career at Deloitte, he headed off to start his own company focused on growing businesses. He works hands-on with startups while running Accuracy." />
               <EmployeeView name="Sophie Bell" position="Senior Accountant" filename="bell.png" description="Sophie is a senior accountant for Accuracy. She has been with the company since its founding and uses lessons learned from her experiences with Accuracy provide the best service possible for her clients." />
               <EmployeeView name="Madeline Mason" position="Accountant" filename="mason.png" description="Madeline is an accountant for Accuracy. Madeline originally interned at Accuracy and accepted an accountancy position shortly after." />
             </div>

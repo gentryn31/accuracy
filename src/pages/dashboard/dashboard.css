@@ -76,7 +76,8 @@
 .message-date,
 .message-email,
 .message-paragraph,
-.message-resolved {
+.message-resolved,
+.message-service {
     color: var(--gray-dark);
     font-size: 14px;
     line-height: 24px;
