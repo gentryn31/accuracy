@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project was submitted to the FBLA Website Design competition.  It was built over the course of 2 - 3 months during the winter of 2018 using ReactJS.  It was (and currently is being) hosted on Google's Firebase cloud platform.  Firebase's database and authentication features were also used for the employee dashboard and contact form.
+This project was submitted to the FBLA (Future Business Leaders of America) Website Design competition.  It was built over the course of 2 - 3 months during the winter of 2018 using ReactJS.  It was (and currently is being) hosted on Google's Firebase cloud platform.  Firebase's database and authentication features were also used for the employee dashboard and contact form.
 
 To see the final submission you can [click here.](https://accuracy-fbla.web.app)
 
